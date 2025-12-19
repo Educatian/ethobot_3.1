@@ -1,0 +1,81 @@
+
+[
+  {
+    "id": "facial_rec_mystery",
+    "type": "Case Study Mystery",
+    "title": "Mismatched Identity",
+    "description": "A facial recognition system used by law enforcement incorrectly identifies a person, leading to a wrongful arrest. Your task is to investigate what could have gone wrong. Click the clues to uncover the story.",
+    "options": [
+      {
+        "text": "Clue 1: Check the training data."
+      },
+      {
+        "text": "Clue 2: Examine the lighting conditions."
+      },
+      {
+        "text": "Clue 3: Investigate the algorithm's confidence score."
+      }
+    ]
+  },
+  {
+    "id": "campus_surveillance_dilemma",
+    "type": "Ethical Dilemma",
+    "title": "The 'Safe' Campus",
+    "description": "Your university wants to install a campus-wide facial recognition system for security. It will track attendance, secure dorms, and identify unauthorized people. Students worry about constant surveillance. As a student representative, what do you recommend?",
+    "options": [
+      {
+        "text": "Approve it as is; safety is the top priority.",
+        "feedback": "This option prioritizes security but largely ignores the principle of Privacy. Widespread surveillance can create a chilling effect on free expression and association, which are vital in an academic environment and fails to balance competing values."
+      },
+      {
+        "text": "Approve, but with strict data privacy policies and transparency.",
+        "feedback": "This is a balanced approach attempting to achieve security while upholding principles of Transparency and Accountability. By creating clear rules for data use, storage, and access, you can mitigate some privacy risks, but the core issue of constant monitoring remains."
+      },
+      {
+        "text": "Propose less-invasive alternatives like better card-key systems.",
+        "feedback": "This response prioritizes Privacy and data minimization by seeking the least invasive solution. It aligns with the principle of 'privacy by design' and questions whether the most powerful technology is always the most appropriate one."
+      },
+      {
+        "text": "Reject the system entirely due to privacy risks.",
+        "feedback": "This is a strong pro-privacy stance, prioritizing the principle of freedom from surveillance. It argues that the risks of misuse, data breaches, and chilling effects on speech are too great to justify the system's implementation, reflecting a precautionary principle."
+      }
+    ]
+  },
+  {
+    "id": "protester_id_perspective",
+    "type": "Perspective Taking",
+    "title": "The Protester ID",
+    "description": "Police use facial recognition on protest footage to identify and charge individuals for minor infractions, which critics say discourages free speech. Analyze this from different viewpoints.",
+    "options": [
+      {
+        "text": "Analyze as a Police Officer",
+        "feedback": "From this viewpoint, the primary principle is likely Justice and maintaining public order. The technology is seen as an efficient tool for law enforcement, but this must be balanced against the potential for chilling effects on free speech and the risk of misidentification (Fairness)."
+      },
+      {
+        "text": "Analyze as a Civil Liberties Advocate",
+        "feedback": "This perspective prioritizes the rights to Privacy and freedom of assembly. The use of facial recognition is seen as a powerful tool for mass surveillance that can deter people from exercising constitutional rights, arguing the social harm outweighs law enforcement benefits."
+      },
+      {
+        "text": "Analyze as the Tech Company CEO",
+        "feedback": "The CEO must balance profit motives with ethical responsibility (Accountability). Creating powerful surveillance tools has foreseeable consequences for human rights, raising questions about corporate social responsibility and the principles of Beneficence (doing good) and Non-maleficence (avoiding harm)."
+      }
+    ]
+  },
+  {
+    "id": "smart_doorbell_mystery",
+    "type": "Case Study Mystery",
+    "title": "The Smart Doorbell's Watchlist",
+    "description": "A smart doorbell's feature allows users to flag 'suspicious' people, creating a shared police database. This system is disproportionately flagging people of color, leading to unwarranted police stops. Investigate why.",
+    "options": [
+      {
+        "text": "Clue 1: Analyze the training data."
+      },
+      {
+        "text": "Clue 2: Investigate the user interface design."
+      },
+      {
+        "text": "Clue 3: Review the police partnership agreement."
+      }
+    ]
+  }
+]

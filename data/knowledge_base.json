@@ -1,0 +1,52 @@
+
+[
+  {
+    "id": "algorithmic_bias",
+    "title": "Algorithmic Bias",
+    "summary": "Describes systematic and repeatable errors in a computer system that create unfair outcomes, such as privileging one arbitrary group of users over others. Bias can emerge from the data used to train the model or the design of the algorithm itself.",
+    "url": "https://en.wikipedia.org/wiki/Algorithmic_bias",
+    "youtubeUrl": "https://www.youtube.com/watch?v=og67qeTZPYs&ab_channel=IBMTechnology"
+  },
+  {
+    "id": "facial_recognition_overview",
+    "title": "Facial Recognition Technology Debates",
+    "summary": "An overview of how facial recognition technology works, its applications in law enforcement and commercial sectors, and the central ethical debates surrounding privacy, surveillance, and consent.",
+    "url": "https://www.aclu.org/issues/privacy-technology",
+    "blogUrl": "https://www.eff.org/pages/face-recognition"
+  },
+  {
+    "id": "facial_recognition_bias",
+    "title": "Bias in Facial Recognition Systems",
+    "summary": "Examines algorithmic bias where systems show higher error rates for women, people of color, and younger/older individuals. This bias often stems from unrepresentative training data and can be worsened by environmental factors like poor lighting. Consequences include false arrests, misidentification, and inequitable access to services.",
+    "url": "http://proceedings.mlr.press/v81/buolamwini18a/buolamwini18a.pdf",
+    "youtubeUrl": "https://www.youtube.com/watch?v=jZl55PsfZJQ"
+  },
+  {
+    "id": "facial_recognition_accuracy_demographics",
+    "title": "Accuracy Across Demographics (NIST Study)",
+    "summary": "Quantitative studies, particularly from the National Institute of Standards and Technology (NIST), reveal significant accuracy disparities across demographic groups. Many algorithms exhibit higher rates of false positives for Asian and African American faces, sometimes 10 to 100 times higher than for Caucasian faces. The highest error rates are often found for Black women, demonstrating a critical intersectional bias.",
+    "url": "https://www.nist.gov/news-events/news/2019/12/nist-study-evaluates-effects-race-age-sex-face-recognition-software",
+    "blogUrl": "http://gendershades.org/"
+  },
+  {
+    "id": "facial_recognition_surveillance",
+    "title": "Facial Recognition and Mass Surveillance",
+    "summary": "Discusses how facial recognition is a key technology for mass surveillance, raising concerns about the erosion of anonymity in public spaces and the chilling effect on free speech and association.",
+    "url": "https://banthescan.amnesty.org/",
+    "youtubeUrl": "https://www.brookings.edu/articles/police-surveillance-and-facial-recognition-why-data-privacy-is-an-imperative-for-communities-of-color/"
+  },
+  {
+    "id": "facial_recognition_consent",
+    "title": "Data Scraping and Consent",
+    "summary": "Explores the controversial practice of companies scraping billions of images from social media and the web to build facial recognition databases without user consent, creating significant privacy risks.",
+    "url": "https://www.californialawreview.org/print/great-scrape",
+    "blogUrl": "https://www.hicomply.com/blog/clearview-ai-and-the-ethics-of-data-scraping-for-facial-recognition"
+  },
+  {
+    "id": "facial_recognition_regulation",
+    "title": "Regulation of Facial Recognition",
+    "summary": "Covers the growing movement to regulate or ban the use of facial recognition, especially by law enforcement, and highlights cities and states that have passed legislation to control its use.",
+    "url": "https://www.theregreview.org/2024/12/28/seminar-facial-recognition-technologies/",
+    "youtubeUrl": "https://youtu.be/8MAIFvYXTx0?si=FvSCezd1sN_iiD5O"
+  }
+]

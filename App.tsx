@@ -1,0 +1,64 @@
+import React, { useState, useEffect } from 'react';
+import { useEthobot } from './hooks/useEthobot';
+import ActivationModal from './components/ActivationModal';
+import ChatLayout from './components/ChatLayout';
+import SessionRecoveryModal from './components/SessionRecoveryModal';
+import { Toaster, toast } from 'react-hot-toast';
+import { clearLocalSession } from './services/loggingService';
+import { useLanguage } from './contexts/LanguageContext';
+import { supabase } from './services/supabaseClient';
+import { Session } from '@supabase/supabase-js';
+
+const App: React.FC = () => {
+  const [session, setSession] = useState<Session | null>(null);
+  const [checkingSession, setCheckingSession] = useState(true);
+  const { language, t } = useLanguage();
+
+  useEffect(() => {
+    // Check active sessions and sets the listener
+    supabase.auth.getSession().then(({ data: { session } }) => {
+      setSession(session);
+      setCheckingSession(false);
+    });
+
+    const { data: { subscription } } = supabase.auth.onAuthStateChange((_event, session) => {
+      setSession(session);
+    });
+
+    return () => subscription.unsubscribe();
+  }, []);
+
+  const ethobot = useEthobot(language);
+
+  const handleActivate = (name: string, course: string) => {
+    ethobot.activateUser(name, course, session?.user.email || '');
+    toast.success(t('sessionActivated'));
+  };
+
+  const handleLogout = async () => {
+    await supabase.auth.signOut();
+    clearLocalSession();
+    window.location.reload();
+  };
+
+  if (checkingSession) {
+    return (
+      <div className="fixed inset-0 bg-gray-50 flex items-center justify-center">
+        <div className="w-16 h-16 border-4 border-alabama-crimson border-dashed rounded-full animate-spin"></div>
+      </div>
+    );
+  }
+
+  return (
+    <div className="font-sans bg-gray-50 text-gray-800">
+      {!session ? (
+        <ActivationModal onActivate={handleActivate} onLogClick={ethobot.logClickEvent} />
+      ) : (
+        <ChatLayout ethobot={ethobot} onLogout={handleLogout} />
+      )}
+      <Toaster position="top-center" />
+    </div>
+  );
+};
+
+export default App;

@@ -1,0 +1,5 @@
+{
+  "name": "ETHOBOT V3.1 – AI Ethics Education Assistant",
+  "description": "A web-based AI assistant for exploring AI Ethics in education, featuring adaptive tutoring, knowledge cards, and interactive challenges, powered by Google Gemini.",
+  "requestFramePermissions": []
+}
