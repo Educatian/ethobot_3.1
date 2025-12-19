@@ -89,17 +89,17 @@ const ActivationModal: React.FC<ActivationModalProps> = ({ onActivate, onLogClic
             <p className="text-xl text-white/90 font-medium max-w-sm">
               {t('aboutSubtitle') || 'AI Ethics Education Assistant'}
             </p>
-            <div className="mt-12 space-y-4 text-left w-full max-w-xs text-sm text-white/80">
-              <div className="flex items-center space-x-3">
-                <div className="w-2 h-2 rounded-full bg-green-400"></div>
+            <div className="mt-16 space-y-6 text-left w-full max-w-xs text-sm text-white/80">
+              <div className="flex items-center space-x-4">
+                <div className="w-2.5 h-2.5 rounded-full bg-green-400"></div>
                 <span>Explore AI Ethics Case Studies</span>
               </div>
-              <div className="flex items-center space-x-3">
-                <div className="w-2 h-2 rounded-full bg-green-400"></div>
+              <div className="flex items-center space-x-4">
+                <div className="w-2.5 h-2.5 rounded-full bg-green-400"></div>
                 <span>Guided Critical Thinking</span>
               </div>
-              <div className="flex items-center space-x-3">
-                <div className="w-2 h-2 rounded-full bg-green-400"></div>
+              <div className="flex items-center space-x-4">
+                <div className="w-2.5 h-2.5 rounded-full bg-green-400"></div>
                 <span>Personalized Learning Feedback</span>
               </div>
             </div>
