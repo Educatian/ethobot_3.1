@@ -89,7 +89,7 @@ export const logClickEvent = async (userFullName: string, course: string, eventT
                 user_name: userFullName,
                 course: course,
                 event_type: eventType,
-                details_json: { ...eventData, sessionId, email: user?.email },
+                details_json: { ...eventData, sessionId },
                 timestamp: new Date().toISOString()
               },
             ]);

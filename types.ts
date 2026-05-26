@@ -4,7 +4,6 @@ export interface User {
   name: string;
   course: string;
   email?: string;
-  id?: string;
 }
 
 export interface Message {

@@ -45,8 +45,7 @@ export const useEthobot = (language: string) => {
         const newUser = {
           name: metadata.full_name || session.user.email?.split('@')[0] || 'Unknown',
           course: metadata.course || 'General',
-          email: session.user.email,
-          id: session.user.id
+          email: session.user.email
         };
         setUser(newUser);
         loggingService.startSession(newUser);
@@ -62,8 +61,7 @@ export const useEthobot = (language: string) => {
         const newUser = {
           name: metadata.full_name || session.user.email?.split('@')[0] || 'User',
           course: metadata.course || 'General',
-          email: session.user.email,
-          id: session.user.id
+          email: session.user.email
         };
         setUser(newUser);
         loggingService.startSession(newUser);
