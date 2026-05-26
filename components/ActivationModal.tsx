@@ -178,14 +178,16 @@ const ActivationModal: React.FC<ActivationModalProps> = ({ onActivate, onLogClic
                   <label className="text-xs font-bold text-gray-500 uppercase tracking-wider mb-1 block">
                     {t('courseNumberLabel')}
                   </label>
-                  <input
-                    type="text"
+                  <select
                     value={course}
                     onChange={(e) => setCourse(e.target.value)}
                     className="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-alabama-crimson/50 focus:border-alabama-crimson transition-all"
-                    placeholder={t('courseNumberPlaceholder')}
                     required={!isLogin}
-                  />
+                  >
+                    <option value="" disabled>{t('courseNumberPlaceholder') || 'Select course'}</option>
+                    <option value="CAT100">CAT 100</option>
+                    <option value="CAT531">CAT 531</option>
+                  </select>
                 </div>
               </div>
             )}

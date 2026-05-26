@@ -7,7 +7,11 @@ import { LogoIcon, InformationCircleIcon, ArrowDownTrayIcon } from './icons';
 import AboutEthobot from './AboutEthobot';
 import AccountModal from './AccountModal';
 import { useLanguage } from '../contexts/LanguageContext';
-import { UserCircle, Menu, X as CloseIcon } from 'lucide-react';
+import { UserCircle, Menu, X as CloseIcon, ClipboardList } from 'lucide-react';
+
+// Qualtrics POST survey (AI-Enhanced Multimedia Learning). Identity is passed so the
+// survey opens pre-matched: PID links chat/log <-> survey; Course routes the module branch.
+const SURVEY_URL = 'https://az1.qualtrics.com/jfe/form/SV_e4DQXWu2fl5OHl4';
 
 interface ChatLayoutProps {
   ethobot: EthobotHook;
@@ -23,6 +27,14 @@ const ChatLayout: React.FC<ChatLayoutProps> = ({ ethobot, onLogout }) => {
   const [isAccountVisible, setIsAccountVisible] = useState(false);
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
   const { language, setLanguage, t } = useLanguage();
+
+  // Open the matched research survey in a NEW TAB so the Ethobot session is never cut off.
+  const goToSurvey = () => {
+    const courseCode = (user?.course ?? '').replace(/\s+/g, '').toUpperCase(); // "CAT 100" -> "CAT100"
+    const qs = new URLSearchParams({ PID: user?.id ?? user?.email ?? '', Course: courseCode });
+    logClickEvent('go-to-survey-button', 'button', 'Take the survey');
+    window.open(`${SURVEY_URL}?${qs.toString()}`, '_blank', 'noopener,noreferrer');
+  };
 
   return (
     <div className="flex h-screen w-screen relative overflow-hidden bg-white">
@@ -122,6 +134,15 @@ const ChatLayout: React.FC<ChatLayoutProps> = ({ ethobot, onLogout }) => {
           </div>
 
           <div className="flex items-center space-x-1.5 lg:space-x-2 flex-shrink-0">
+            <button
+              id="go-to-survey-button"
+              onClick={goToSurvey}
+              className="flex items-center space-x-1.5 px-2.5 py-1.5 lg:px-4 bg-alabama-crimson hover:bg-crimson-dark text-white rounded-lg transition-all shadow-sm font-bold"
+              title={language === 'ko' ? '다음 페이지로 이동 (새 탭에서 열림)' : 'Continue to the next page (opens in a new tab)'}
+            >
+              <ClipboardList size={18} />
+              <span className="text-xs lg:text-sm">{language === 'ko' ? '다음 페이지 →' : 'Next Page →'}</span>
+            </button>
             <div className="flex bg-gray-100 p-1 rounded-lg mr-1 lg:mr-2">
               <button
                 onClick={() => {
